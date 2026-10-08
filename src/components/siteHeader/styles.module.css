@@ -1,0 +1,31 @@
+.header {
+    position: fixed;
+    z-index: 20;
+    inset: 0 0 auto;
+    display: flex;
+    height: 68px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 max(24px, calc((100vw - 1320px) / 2));
+    border-bottom: 1px solid #e7e0d6;
+    color: #362d37;
+    background: rgb(250 248 243 / 95%);
+    backdrop-filter: blur(14px);
+
+    .brand { display: inline-flex; align-items: center; gap: 9px; font-size: 14px; font-weight: 750; letter-spacing: -0.035em; }
+    .brandMark { display: grid; width: 33px; height: 33px; place-items: center; border: 1px solid #d7c8d4; border-radius: 9px; color: #79536e; background: #f0e8ef; }
+    .brandMark svg { width: 15px; height: 15px; }
+    .brandAccent { padding: 0 2px; color: #a8819b; }
+    .navigation { display: flex; align-items: center; gap: 28px; color: #79717b; font-size: 11px; }
+    .navigation a:hover { color: #62465a; }
+    .repository { display: inline-flex; min-height: 36px; align-items: center; gap: 7px; padding: 0 11px; border: 1px solid #d9d0c7; border-radius: 8px; color: #564c59; background: #fffdfa; font-size: 10px; font-weight: 700; }
+    .repository svg { width: 15px; height: 15px; }
+    .repository:hover { border-color: #a68ca0; box-shadow: 0 2px 8px rgb(73 50 70 / 9%); }
+
+    @media (max-width: 620px) {
+        height: 62px;
+        padding: 0 13px;
+        .navigation { display: none; }
+        .repository { min-height: 34px; padding: 0 9px; }
+    }
+}
