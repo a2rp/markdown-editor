@@ -1,0 +1,20 @@
+.button {
+    position: fixed;
+    z-index: 10;
+    right: max(20px, calc((100vw - 1360px) / 2));
+    bottom: 22px;
+    display: grid;
+    width: 43px;
+    height: 43px;
+    place-items: center;
+    border: 1px solid #d4c5d1;
+    border-radius: 11px;
+    color: #714c67;
+    background: #fffdfa;
+    box-shadow: 0 6px 20px rgb(54 37 51 / 15%);
+
+    svg { width: 17px; height: 17px; }
+    &:hover { border-color: #9d7c92; box-shadow: 0 7px 22px rgb(54 37 51 / 21%); }
+    &:focus-visible { outline: 3px solid rgb(135 92 120 / 36%); outline-offset: 3px; }
+    @media (max-width: 620px) { right: 13px; bottom: 13px; }
+}
