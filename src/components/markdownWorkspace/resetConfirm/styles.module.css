@@ -1,0 +1,25 @@
+.overlay {
+    position: fixed;
+    z-index: 50;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    background: rgb(25 20 27 / 58%);
+
+    .dialog { position: relative; width: min(100%, 420px); padding: 27px; border: 1px solid #ded4d9; border-radius: 15px; color: #352e37; background: #fffdfa; box-shadow: 0 22px 70px rgb(39 27 37 / 24%); }
+    .closeButton { position: absolute; top: 12px; right: 12px; display: grid; width: 32px; height: 32px; place-items: center; border: 0; border-radius: 7px; color: #807681; background: transparent; }
+    .closeButton svg { width: 17px; height: 17px; }
+    .closeButton:hover { color: #3b333d; background: #f1ece7; }
+    .icon { display: grid; width: 42px; height: 42px; margin-bottom: 15px; place-items: center; border-radius: 12px; color: #9d6938; background: #f8eddf; }
+    .icon svg { width: 20px; height: 20px; }
+    h2 { color: #2e2931; font-size: 19px; font-weight: 730; }
+    p { margin-top: 8px; color: #77717b; font-size: 13px; line-height: 1.6; }
+    .actions { display: flex; justify-content: end; gap: 9px; margin-top: 23px; }
+    .actions button { min-height: 39px; padding: 0 12px; border-radius: 8px; font-size: 12px; font-weight: 700; }
+    .cancelButton { border: 1px solid #d8d0c7; color: #615a65; background: #f8f5ef; }
+    .confirmButton { border: 1px solid #805772; color: white; background: #805772; }
+    .cancelButton:hover { border-color: #a99c8d; box-shadow: 0 2px 9px rgb(39 27 37 / 8%); }
+    .confirmButton:hover { border-color: #a17a96; box-shadow: 0 2px 9px rgb(39 27 37 / 12%); }
+    .actions button:focus-visible, .closeButton:focus-visible { outline: 3px solid rgb(135 92 120 / 38%); outline-offset: 3px; }
+}
