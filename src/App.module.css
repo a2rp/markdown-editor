@@ -1,1 +1,59 @@
-﻿.appShell { display: grid; min-height: 100vh; place-content: center; color: var(--ink); }
+﻿.appShell {
+    min-height: 100vh;
+    padding-top: 68px;
+    overflow: clip;
+
+    .hero { padding: 65px 24px 20px; border-bottom: 1px solid #e7e0d6; background: radial-gradient(ellipse at 77% 40%, rgb(187 159 178 / 19%), transparent 34%), #f5f2ec; }
+    .heroInner { display: grid; max-width: 1320px; grid-template-columns: 1fr 0.86fr; align-items: center; gap: 64px; margin: 0 auto; }
+    .heroCopy { max-width: 620px; }
+    .heroLabel { display: flex; align-items: center; gap: 8px; margin-bottom: 17px; color: #865c79; font-size: 10px; font-weight: 750; letter-spacing: 0.12em; text-transform: uppercase; }
+    .heroLabel svg { width: 15px; height: 15px; }
+    h1 { color: #302a32; font-family: Georgia, "Times New Roman", serif; font-size: clamp(45px, 6vw, 73px); font-weight: 500; letter-spacing: -0.06em; line-height: 0.99; }
+    h1 span { color: #8c6681; font-style: italic; }
+    .heroDescription { max-width: 540px; margin-top: 20px; color: #756d78; font-size: 14px; line-height: 1.75; }
+    .heroButton { display: inline-flex; align-items: center; gap: 9px; margin-top: 23px; padding: 11px 15px; border: 1px solid #79536e; border-radius: 8px; color: #fffdfa; background: #79536e; font-size: 11px; font-weight: 700; transition: border-color 150ms ease, box-shadow 150ms ease; }
+    .heroButton svg { width: 15px; height: 15px; }
+    .heroButton:hover { border-color: #9d7b95; box-shadow: 0 4px 14px rgb(73 50 70 / 17%); }
+    .heroPromise { display: flex; align-items: center; gap: 7px; margin-top: 19px; color: #7e8375; font-size: 10px; }
+    .heroPromise svg { width: 13px; height: 13px; color: #718363; }
+    .heroArtwork { justify-self: end; width: min(100%, 470px); border: 1px solid #dfd5cc; border-radius: 13px; overflow: hidden; background: #fffdfa; box-shadow: 0 18px 55px rgb(66 48 58 / 10%); }
+    .artworkTop { display: flex; min-height: 41px; align-items: center; justify-content: space-between; padding: 0 13px; border-bottom: 1px solid #ece5dc; color: #807984; background: #f8f5ef; font-family: ui-monospace, Consolas, monospace; font-size: 9px; }
+    .artworkTop svg { width: 14px; height: 14px; color: #6a8b60; }
+    .artworkColumns { display: grid; grid-template-columns: 1fr 1fr; min-height: 190px; }
+    .sourceSample { display: flex; flex-direction: column; gap: 12px; padding: 20px 15px; border-right: 1px solid #eee7de; color: #827987; background: #faf8f3; font-family: ui-monospace, Consolas, monospace; font-size: 9px; }
+    .sourceSample span:first-child, .sourceSample span:nth-child(2) { color: #825d78; }
+    .renderSample { display: flex; flex-direction: column; gap: 10px; padding: 20px 15px; color: #645b66; font-size: 9px; }
+    .renderSample strong { color: #39313b; font-family: Georgia, "Times New Roman", serif; font-size: 15px; font-weight: 600; }
+    .renderSample i { width: 100%; height: 1px; margin-top: -6px; background: #e8dfd6; }
+    .renderSample b { color: #514651; font-size: 10px; }
+    .renderSample > span { color: #6a7c62; }
+    .renderSample em { padding: 6px 8px; border-left: 2px solid #ba9caf; color: #7d6a78; background: #faf6f9; font-style: normal; }
+    .artworkBottom { display: flex; justify-content: space-between; padding: 8px 13px; border-top: 1px solid #ece5dc; color: #89818b; background: #f8f5ef; font-size: 8px; }
+    .heroFoot { display: flex; max-width: 1320px; justify-content: space-between; margin: 48px auto 0; padding-top: 13px; border-top: 1px solid #e4ddd3; color: #89818b; font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; }
+    .heroFoot > span:last-child { display: inline-flex; align-items: center; gap: 8px; }
+    .heroFoot i { width: 4px; height: 4px; border-radius: 50%; background: #9b7992; }
+
+    .guide { padding: 42px max(24px, calc((100vw - 1320px) / 2)) 63px; border-top: 1px solid #e6dfd5; background: #eee9e0; }
+    .guideHeading p { margin-bottom: 6px; color: #865c79; font-size: 9px; font-weight: 750; letter-spacing: 0.12em; text-transform: uppercase; }
+    .guideHeading h2 { color: #342e36; font-family: Georgia, "Times New Roman", serif; font-size: clamp(23px, 3vw, 31px); font-weight: 500; letter-spacing: -0.035em; }
+    .guideGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 21px; }
+    .guideGrid article { display: grid; grid-template-columns: 29px 1fr; gap: 11px; padding: 15px; border: 1px solid #ded6ca; border-radius: 9px; background: #f8f5ef; }
+    .guideGrid article > span { display: grid; width: 25px; height: 25px; place-items: center; border: 1px solid #ddcfd9; border-radius: 7px; color: #865c79; background: #f2eaf0; font-family: ui-monospace, Consolas, monospace; font-size: 9px; }
+    .guideGrid h3 { color: #453b47; font-size: 11px; font-weight: 720; }
+    .guideGrid p { margin-top: 5px; color: #7b737d; font-size: 10px; line-height: 1.65; }
+
+    @media (max-width: 900px) {
+        .heroInner { grid-template-columns: 1fr 0.9fr; gap: 32px; }
+        .guideGrid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 680px) {
+        padding-top: 62px;
+        .hero { padding: 44px 16px 18px; }
+        .heroInner { grid-template-columns: 1fr; gap: 30px; }
+        h1 { font-size: clamp(46px, 12vw, 60px); }
+        .heroArtwork { width: 100%; }
+        .heroFoot { margin-top: 35px; font-size: 8px; }
+        .guide { padding: 35px 16px 46px; }
+    }
+    @media (max-width: 410px) { .heroFoot > span:last-child { gap: 4px; font-size: 7px; } }
+}
