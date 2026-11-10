@@ -33,7 +33,7 @@ The preview uses GitHub-flavored Markdown. It does not execute embedded HTML, an
 ## Run locally
 
 ~~~sh
-npm install
+npm ci
 npm run dev
 ~~~
 
